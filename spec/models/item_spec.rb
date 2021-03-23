@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
-  describe 'validations' do
+  describe 'validations' do    
     it { should have_attached_file(:image) }
     it { should validate_presence_of(:title) }
     it { should validate_uniqueness_of(:title) }
@@ -14,12 +14,12 @@ RSpec.describe Item, type: :model do
     it { should validate_presence_of(:category_id) }
     it { should define_enum_for(:status) }
 
-  end
+  end     
 
   describe 'relationships' do
     it { should belong_to(:category) }
     it { should respond_to(:category) }
     it { should have_many(:orders) }
     it { should respond_to(:orders) }
-  end
+  end         
 end
