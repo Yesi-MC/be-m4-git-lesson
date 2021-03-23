@@ -20,7 +20,7 @@ FactoryBot.define do
       Faker::Internet.password
     end
 
-    role 0
+    role { 0 }
   end
 end
 
